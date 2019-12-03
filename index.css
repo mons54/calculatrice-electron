@@ -1,0 +1,76 @@
+body {
+  margin: 0;
+  padding: 0.2rem;
+}
+
+body * {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 1.2rem;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.result {
+  justify-content: flex-end;
+  align-items: flex-end;
+  font-size: 2rem;
+  height: 60px;
+  border: 1px solid #ebebeb;
+  border-radius: 8px;
+  margin: auto;
+  padding: 0px 10px;
+  box-sizing: border-box;
+  margin: 0.2rem;
+}
+
+.screen .history {
+  justify-content: flex-end;
+  align-items: flex-end;
+  width: 100%;
+  height: 24px;
+}
+
+.screen .result {
+  justify-content: flex-end;
+  align-items: flex-end;
+  width: 100%;
+  height: 48px;
+  font-size: 2rem;
+}
+
+.row .btn {
+  cursor: pointer;
+  flex: 1;
+  border: none;
+  padding: 0.4rem;
+  border-radius: 4px;
+  background-color: #f1f3f4;
+  margin: 0.2rem;
+  outline: none;
+  user-select: none;
+}
+
+.row .btn-dark {
+  background-color: #dfe1e5;
+}
+
+.row .btn-primary {
+  background-color: #4285f4;
+  color: #fff;
+}
+
+.row .btn:hover {
+  background-color: #e8eaeb;
+}
+
+.row .btn-dark:hover {
+  background-color: #d7d9dd;
+}
+
+.row .btn-primary:hover {
+  background-color: #4d8bf1;
+}

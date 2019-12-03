@@ -1,0 +1,16 @@
+{
+  "name": "calculatrice-electron",
+  "version": "1.0.0",
+  "description": "Calculatrice Electron JS",
+  "main": "index.js",
+  "repository": "git@github.com:mons54/calculatrice-electron.git",
+  "author": "Julien SImonet <jsimonet.alaji@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron ."
+  },
+  "devDependencies": {
+    "electron": "^7.1.3",
+    "electron-reload": "^1.5.0"
+  }
+}
