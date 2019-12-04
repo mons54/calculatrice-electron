@@ -1,5 +1,8 @@
 function init () {
-  result = false
+  if (result !== null) {
+    setAns()
+  }
+  result = null
   started = false
   paranthese = 0
   screenStart.innerHTML = 0
@@ -14,10 +17,14 @@ function encode (str) {
   return buf.join('')
 }
 
+function setAns() {
+  screenLast.innerHTML = 'Ans = ' + result
+}
+
 function addToScreenStart (value, isSymbol = false) {
   if (result) {
     remove.innerHTML = "CE"
-    result = false
+    setAns()
   }
   if (!started) {
     if (!isSymbol)
@@ -84,33 +91,32 @@ function lastIsLess () {
   return !lastIsSymbol() && getLast() === '&#45;'
 }
 
+const screenLast = document.querySelector('[data-screen-last]')
 const screenStart = document.querySelector('[data-screen-start]')
 const screenEnd = document.querySelector('[data-screen-end]')
 const remove = document.querySelector('[data-paranthese-remove]')
 
-let started, pOpen, symbol, less, point, result
+let started, pOpen, symbol, less, point, result = null
 
 init()
 
 document.querySelector('[data-result]').addEventListener('click', function () {
-  let value = (screenStart.innerHTML + screenEnd.innerHTML).
+  const value = (screenStart.innerHTML + screenEnd.innerHTML).
   replace(/÷/gi, '/').
   replace(/×/gi, '*').
   replace(/%/gi, '/100')
 
   try {
-    value = eval(value)
-    screenStart.innerHTML = value
+    result = eval(value)
+    screenLast.innerHTML = value + ' ='
+    screenStart.innerHTML = result
     screenEnd.innerHTML = null
-    if (value === 0) {
+    if (result === 0) {
       init()
     } else {
-      result = true
       remove.innerHTML = "AC"
     }
-  } catch (e) {
-    console.log(e)
-  }
+  } catch (e) {}
 })
 
 document.querySelectorAll('[data-number]').forEach((element) => {

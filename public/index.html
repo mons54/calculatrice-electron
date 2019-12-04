@@ -7,40 +7,45 @@
     <link rel="stylesheet" href="index.css">
   </head>
   <body>
-    <div class="row screen">
-      <div class="screen-start" data-screen-start>0</div>
-      <div class="screen-end" data-screen-end></div>
-    </div>
-    <div class="row">
-      <button class="btn btn-dark" data-paranthese-open>&#40;</button>
-      <button class="btn btn-dark" data-paranthese-close>&#41;</button>
-      <button class="btn btn-dark" data-paranthese-percent>&#37;</button>
-      <button class="btn btn-dark" data-paranthese-remove>&#67;&#69;</button>
-    </div>
-    <div class="row">
-      <button class="btn" data-number="7">&#55;</button>
-      <button class="btn" data-number="8">&#56;</button>
-      <button class="btn" data-number="9">&#57;</button>
-      <button class="btn btn-dark" data-symbol="&#247;">&#247;</button>
-    </div>
-    <div class="row">
-      <button class="btn" data-number="4">&#52;</button>
-      <button class="btn" data-number="5">&#53;</button>
-      <button class="btn" data-number="6">&#54;</button>
-      <button class="btn btn-dark" data-symbol="&#215;">&#215;</button>
-    </div>
-    <div class="row">
-      <button class="btn" data-number="1">&#49;</button>
-      <button class="btn" data-number="2">&#50;</button>
-      <button class="btn" data-number="3">&#51;</button>
-      <button class="btn btn-dark" data-symbol="&#45;">&#45;</button>
-    </div>
-    <div class="row">
+    <div class="container">
+      <div class="row screen">
+        <div class="screen-last" data-screen-last></div>
+        <div class="screen-operation">
+          <div class="screen-operation-start" data-screen-start>0</div>
+          <div class="screen-operation-end" data-screen-end></div>
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-dark" data-paranthese-open>&#40;</button>
+        <button class="btn btn-dark" data-paranthese-close>&#41;</button>
+        <button class="btn btn-dark" data-paranthese-percent>&#37;</button>
+        <button class="btn btn-dark" data-paranthese-remove>&#67;&#69;</button>
+      </div>
+      <div class="row">
+        <button class="btn" data-number="7">&#55;</button>
+        <button class="btn" data-number="8">&#56;</button>
+        <button class="btn" data-number="9">&#57;</button>
+        <button class="btn btn-dark" data-symbol="&#247;">&#247;</button>
+      </div>
+      <div class="row">
+        <button class="btn" data-number="4">&#52;</button>
+        <button class="btn" data-number="5">&#53;</button>
+        <button class="btn" data-number="6">&#54;</button>
+        <button class="btn btn-dark" data-symbol="&#215;">&#215;</button>
+      </div>
+      <div class="row">
+        <button class="btn" data-number="1">&#49;</button>
+        <button class="btn" data-number="2">&#50;</button>
+        <button class="btn" data-number="3">&#51;</button>
+        <button class="btn btn-dark" data-symbol="&#45;">&#45;</button>
+      </div>
+      <div class="row">
       <button class="btn" data-number="0">&#48;</button>
       <button class="btn" data-point>&#46;</button>
       <button class="btn btn-primary" data-result>&#61;</button>
       <button class="btn btn-dark" data-symbol="&#43;">&#43;</button>
     </div>
-    <script src="app.js"></script>
+    </div>
+    <script src="index.js"></script>
   </body>
 </html>

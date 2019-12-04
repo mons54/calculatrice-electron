@@ -15,10 +15,8 @@ body * {
 }
 
 .screen {
-  justify-content: flex-end;
-  align-items: flex-end;
-  font-size: 2rem;
-  height: 60px;
+  flex-direction: column;
+  height: 72px;
   border: 1px solid #ebebeb;
   border-radius: 8px;
   margin: auto;
@@ -27,11 +25,33 @@ body * {
   margin: 0.2rem;
 }
 
-.screen > div {
-  font-size: inherit;
+.screen-last {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  flex: 1;
+  width: 100%;
+  font-size: 1rem;
+  color: #70757A;
+  margin-bottom: 4px;
 }
 
-.screen .screen-end {
+.screen-operation {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  width: 100%;
+  flex: 1;
+  overflow: hidden
+}
+
+.screen-operation-start,
+.screen-operation-end {
+  font-size: 2rem;
+  height: 100%;
+}
+
+.screen-operation-end {
   color: #cccccc;
 }
 
