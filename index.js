@@ -1,6 +1,6 @@
 const { app, BrowserWindow, Menu } = require('electron')
 
-require('electron-reload')(__dirname);
+//require('electron-reload')(__dirname);
 
 Menu.setApplicationMenu(null);
 
@@ -8,17 +8,19 @@ let win
 
 function createWindow () {
   win = new BrowserWindow({
-    width: 800,
-    height: 600,
+    width: 400,
+    height: 284,
     title: "Calculatrice de la mort qui tue !",
-    autoHideMenuBar: false
+    autoHideMenuBar: false,
+    resizable: false,
+    icon: './public/icon.png'
   })
 
   win.removeMenu()
 
-  win.loadFile('index.html')
+  win.loadFile('./public/index.html')
 
-  win.webContents.openDevTools()
+  //win.webContents.openDevTools()
 
   win.on('page-title-updated', (e) => {
     e.preventDefault();
